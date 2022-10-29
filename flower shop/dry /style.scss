@@ -1,0 +1,103 @@
+header{
+    padding-top: 30px;
+    .inner{
+        width: 85%;
+        margin: 0 auto;
+        h1{
+            font-family: "Dancing Script", cursive;
+        }
+    }
+}
+.container{
+    width: 85%;
+    margin: 50px auto 0;
+    h2{
+        font-weight: lighter;
+        margin-bottom: 20px;
+    }
+    .inner{
+        display: flex;
+        justify-content: space-between;
+        width:900px;
+        max-width: 100%;
+            img{
+                width: 400px;
+                height: 400px;
+                object-fit: cover;
+            }
+        .text{
+            width: 400px;
+            margin-left: 30px;
+            p{
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            .order-table{
+                width: 100%;
+                margin-bottom: 20px;
+                .color, .size{
+                    width: 20%;
+                }
+                .quantity{
+                    width: 60%;
+                }
+                td{
+                    border-top: solid 1px black;
+                    font-weight: normal;
+                    padding: 10px;
+                    border-right: solid 1px #c3c3c3;
+                    text-align: center;
+                    &:last-child{
+                        border-right: none;
+                    }
+                }
+                th{
+                    font-weight: normal;
+                    padding: 10px;
+                    border-right: solid 1px #c3c3c3;
+                    text-align: center;
+                    &:last-child{
+                        border-right: none;
+                    }
+                }
+                select{
+                    width: 100%;
+                    border: solid 1px #c3c3c3;
+                    padding: 0 10px;
+                    appearance: menulist;
+                }
+            }
+        }
+    }
+}
+footer{
+    position: absolute;
+    bottom: 10px;
+    left: 45%;
+}
+
+
+@media screen and (max-width:800px){
+    .container{
+        .inner{
+            flex-direction: column;
+            padding: 0 20px;
+            img{
+                width: 100%;
+                margin-bottom: 50px;
+            }
+            .text{
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+    footer{
+        position: static;
+        text-align: center;
+    }
+}

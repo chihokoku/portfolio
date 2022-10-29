@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 1000px){
+    header{
+        justify-content:flex-start;  /*左づめ表示（初期位置） */
+    }
+    header nav{
+        display: none;
+      
+    }
+    header .title{
+        width: 60%;
+        margin-left: 30px;
+    }
+    .burger{
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        /* position: relative; */
+        top: 27px;
+        right: 10%;
+        cursor: pointer;
+    }
+    .burger span{
+        display: block;
+        position: absolute;
+        width: 80%;
+        height: 2px;
+        background-color: black;
+    }
+    .burger span:nth-child(1){
+        top: 10px;
+    }
+    .burger span:nth-child(2){
+        top: 27px;
+    }
+    .burger span:nth-child(3){
+        bottom: 12px;
+    }
+    aside{
+        display: block;
+        width: 400px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right:-400px;
+        background-color: rgb(250, 243, 235);
+        z-index: 20;
+        padding: 120px 20px;
+        overflow-x: hidden;
+        overflow-y: auto; 
+        transition: all 1.0s;
+        -webkit-overflow-scrolling:touch;
+        opacity: 0;  
+        border-left: 1px  solid black;
+    }
+    aside li{
+         margin-bottom: 40px;
+    }
+    aside a{
+        text-decoration: none;
+        color: black;
+        font-size: 2.0rem;
+        padding-bottom: 10px;
+        border-bottom: 2px solid green;
+    }
+    .open{
+        right: 0;
+        opacity: 1;
+    }
+    .open .burger {
+        position: absolute;
+        top: 27px;
+        left: 30px;
+    }
+    .open .burger span:nth-child(1){
+        transform: translateY(18px) rotate(-315deg); 
+    }
+    .open .burger span:nth-child(2){
+        opacity: 0;
+    }
+    .open .burger span:nth-child(3){
+        transform: translateY( -18px) rotate(315deg);
+    }
+    .mainvisual{
+        flex-direction: column-reverse;
+    }
+    .mainvisual img {
+        width: 100%;
+        height:50vh;
+        margin: 0 auto;
+    }
+    .mainvisual .coment{
+        width: 90%;
+        margin: 0 auto;
+        position: absolute;
+        top: 20vh;
+        left: 5%;
+        z-index: 10;
+    }
+    .mainvisual .coment p{
+        margin-top: 0%;
+        padding:10px 0;
+    }
+    #cmt{
+        margin-top: 25vh;
+        margin-left: 0px;
+        padding: 30px 30px;
+        font-size: 2.0rem;
+        color: green;
+    }
+    #mts{
+        margin-top:40vh;
+    }
+    #time img , #charge img 
+    , .wrapper-time , .wrapper-charge{
+        width: 100%;
+    }
+    #time{
+        flex-direction: column;
+    }
+    #charge{
+        flex-direction: column;
+    }
+    table th:first-child{
+        width: 30px;
+        color: white;
+    }
+    .foot .footer-logo h2 span{
+        font-size: 1.4rem;
+    }
+  }
+
+  @media screen and (max-width:800px){
+    header .title{
+        width: 70%;
+        margin-left: 0px;
+    }
+    #cmt{
+        margin-top :20vh;
+        font-size: 1.3rem;
+    }
+    footer h2{
+        font-size: 2.5rem;
+    }
+    footer .foot{
+       flex-direction: column;
+    }
+    footer .footer-logo , footer address ,footer nav{
+        width: 100%;
+    }
+    footer address{
+        margin-top: 0px;
+    }
+    footer address p{
+        margin: 5px 0;
+        text-align: left;
+    }
+    footer ul{
+        margin-top: 0px;
+        display: flex;
+    }
+    footer nav li a{
+        font-size:20px;
+    }
+     #charge{
+        padding-top: 0px;
+        margin-bottom: 50px;
+    }
+    #address{
+        margin-bottom: 50px;
+    }
+    #address .text{
+        flex-direction: column;
+    }
+    #address iframe{
+        width: 80%;
+    }
+    #attention{
+        padding: 50px 0;
+    }
+    footer{
+        margin-top: 50px;
+    }
+    .visual{
+        margin-bottom: 50px;
+    }
+    .visual h3{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width:500px) {
+    h2{
+        font-size: 2.0rem;
+    }
+    #mts{
+        margin-top: 45vh;
+        font-size: 1.0rem;
+    }
+    header {
+        height: 80px;
+    }
+    header .title span{
+        font-size: 1.0rem;
+    }
+    header .title{
+        margin-left: 0px;
+    }
+    header .title img{
+        margin-top: 15px;
+    }
+    header .burger {
+        width:40px;
+        height: 40px;
+    }
+    header .burger span:nth-child(1){
+        top: 5px;
+    }
+    header .burger span:nth-child(2){
+        top: 18px;
+    }
+    header .burger span:nth-child(3){
+        bottom: 5px;
+    }
+    aside{
+        width: 100%;
+        right: -100%;
+    }
+    .mainisual.coment{
+        margin-top: 10vh;
+        padding: 0;
+    }
+    #cmt{
+        margin-top: 15vh;
+        padding: 30px;
+    }
+    .mainvisual .mts-span{
+        font-size: 4.0rem;
+    }
+    /* .mainvisual .coment{
+        font-size: 1.0rem;
+    } */
+    .wrapper-time{
+        margin-top: 50px;
+        font-size: 1.0rem;
+    }
+    table{
+        font-size: 0.8rem;
+    }
+    .wrapper-charge{
+        margin-top: 50px;
+        font-size: 1.0rem;
+    }
+    .wrapper-charge dt , .wrapper-charge dd{
+        width: 50%;
+    }
+    .visual{
+        display: none;
+    }
+    #address p{
+        font-size: 1.0rem;
+    }
+    #address iframe{
+        height: 300px;
+    }
+    
+    .visual ul{
+        flex-direction: column;
+    }
+    .visual li{
+        width: 90%;
+        margin: 0 auto 20px;
+        text-align: center;
+    }
+    .visual img{
+        width: 100%;
+        height: 400px;
+    }
+    #attention{
+        padding:25px 0;
+    }
+    #attention p{
+        font-size: 1.0rem;
+    }
+    .footer-logo h3{
+        font-size: 1.8rem;
+    }
+    .footer-logo h3 span{
+        font-size: 1.0rem;
+    }
+    footer address p{
+        font-size: 1.0rem;
+    }
+    footer nav ul a{
+        font-size:0.8rem;
+    }
+}

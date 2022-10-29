@@ -1,0 +1,105 @@
+header {
+  padding-top: 30px;
+}
+header .inner {
+  width: 85%;
+  margin: 0 auto;
+}
+header .inner h1 {
+  font-family: "Dancing Script", cursive;
+}
+
+.container {
+  width: 85%;
+  margin: 50px auto 0;
+}
+.container h2 {
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+.container .inner {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  max-width: 100%;
+}
+.container .inner img {
+  width: 400px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .inner .text {
+  width: 400px;
+  margin-left: 30px;
+}
+.container .inner .text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.container .inner .text table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.container .inner .text .order-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.container .inner .text .order-table .color, .container .inner .text .order-table .size {
+  width: 20%;
+}
+.container .inner .text .order-table .quantity {
+  width: 60%;
+}
+.container .inner .text .order-table td {
+  border-top: solid 1px black;
+  font-weight: normal;
+  padding: 10px;
+  border-right: solid 1px #c3c3c3;
+  text-align: center;
+}
+.container .inner .text .order-table td:last-child {
+  border-right: none;
+}
+.container .inner .text .order-table th {
+  font-weight: normal;
+  padding: 10px;
+  border-right: solid 1px #c3c3c3;
+  text-align: center;
+}
+.container .inner .text .order-table th:last-child {
+  border-right: none;
+}
+.container .inner .text .order-table select {
+  width: 100%;
+  border: solid 1px #c3c3c3;
+  padding: 0 10px;
+  -webkit-appearance: menulist;
+     -moz-appearance: menulist;
+          appearance: menulist;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+  left: 45%;
+}
+
+@media screen and (max-width: 800px) {
+  .container .inner {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .container .inner img {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .container .inner .text {
+    width: 100%;
+    margin: 0;
+  }
+  footer {
+    position: static;
+    text-align: center;
+  }
+}/*# sourceMappingURL=style.css.map */

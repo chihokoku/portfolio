@@ -1,0 +1,355 @@
+@charset "UTF-8";
+
+html{
+  font-size: 100%;
+  font-family: 'BIZ UDPMincho', serif;
+  overflow-x: hidden;/* ここにもoverflowがないと横スクロールできてしまう*/
+  overflow-y: auto;
+}
+body{
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* translateXがあることによって横スクロールができてしまう */
+  /* しかしbodyにoverflowを指定することで横スクロールばーがなくなる
+  overflowは、はみ出した表示の設定 */
+}
+img{
+  max-width: 100%;
+}
+li{
+  list-style: none;
+}
+h2{
+  font-size: 3.0rem;
+}
+.border{
+  display: block;
+  width: 120px;
+  height: 2px;
+  background-color: green;
+  margin-bottom: 50px;
+}
+header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: green;
+  background-color: white;
+  border-bottom: 1px solid black;
+  height: 100px;
+}
+header .title{
+  width: 40%;
+}
+header .title span{
+  display:inline-block ;
+  font-size: 2.0rem;
+}
+header .title img{
+  width: 80%;
+  max-width: 420px;
+  max-height: 85px;
+  margin-top: 10px;
+  object-fit: cover;
+}
+header nav{
+  width: 55%;
+}
+header  nav ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+/* header nav li{
+  margin-right: 40px;
+} */
+header nav ul a{
+  text-decoration: none;
+  color: green;
+  margin-top: 180px;
+  font-size: 1.8rem;
+}
+.burger{
+  display: none;
+}
+aside{
+  display: none;
+}
+/* main{
+  background-image: url(IMG_5502.JPG);
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+  background-color: rgba(225, 225, 225, 0.5);
+  background-blend-mode:lighten;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+} */
+
+.mainvisual{
+ /* paddingとネガティブmarginでheaderに重ならない */
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+img[src="picture/IMG_5859.jpeg"]{
+  object-fit: cover;
+}
+img[src="image_67234561.JPG"]{
+  object-fit: cover;
+}
+img[src="picture/IMG_5857.jpeg"]{
+  object-fit: cover;
+}
+@keyframes imgfade {
+  0%{     
+    /* アニメーションの名前を自分で作成 
+    Javascriptを使用していないためcssで
+    fadeIn fadeOutの代用する*/
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+.mainvisual img{
+  width: 50%;
+  height: 90vh;
+  opacity: 0;
+  animation:imgfade 4.0s infinite;
+  /* 画像のふわっと出すにはanimationプロパティで指定 */
+}
+.mainvisual .coment {
+  width: 45%;
+  font-size: 1.7rem;
+  text-align: center; 
+  height: 80vh;
+}
+#cmt{
+  border: 3px solid green;
+  box-shadow: 2px 2px 8px gray;
+  margin-top: 10vh;
+  margin-left: 20px;
+}
+.mainvisual p{
+  margin-top:80px;
+}
+.mainvisual .mts-span{
+  color: green;
+  font-size: 6.0rem;
+}
+.inner{
+  width: 100%;
+  background-color: rgb(250, 243, 235);
+}
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+
+#mts{
+  width: 70%;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding:50px 0;
+  background-color: white;
+  font-size: 1.5rem;
+}
+#mts .line-height{
+  margin-bottom: 30px;
+}
+#time{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  margin-bottom: 50px  ;
+}
+#time img , #charge img{
+  width: 45%;
+  height: 400px;
+  object-fit: cover;
+}
+#time span{
+  display: block;
+  width: 120px;
+  height: 2px;
+  background-color: green;
+  margin-bottom: 50px;
+}
+#time p{
+  margin-top: 20px;
+}
+.wrapper-time{
+  width: 50%;
+  padding:20px;
+  background-color: white;
+  font-size: 1.5rem;
+  margin-top: 150px;
+  /* border: 1px solid black;
+  box-shadow: 0 0 8px 4px gray; */
+}
+
+table{
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+table th{
+  border-right:1px solid black ;
+  border-bottom: 1px solid black;
+  text-align: center;
+  padding: 10px 0 ;
+  background-color: rgb(250, 243, 235);
+}
+table td{
+  border-right:1px solid black ;
+   border-bottom: 1px solid black;
+  text-align: center;
+  padding: 10px 0;
+}
+#charge{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+}
+.wrapper-charge{
+  width: 45%;
+  font-size: 1.5rem;
+  padding:20px;
+  margin-top: 150px;
+  background-color: white;
+}
+.wrapper-charge dl{
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrapper-charge dt{
+  width: 40%;
+  margin-bottom: 10px;
+}
+.wrapper-charge dd{
+  width: 40%;
+  margin-bottom: 10px;
+}
+
+.visual{
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.visual h3{
+  font-size: 2.0rem;
+}
+.visual ul{
+  display: flex;
+  justify-content: space-between;
+}
+.visual li{
+  width: 33%;
+  list-style: none;
+}
+.visual img{
+  /* height: 400px; */
+  object-fit: cover;
+}
+#address{
+  margin-bottom: 50px;
+}
+#address h2{
+  font-size: 30px;
+}
+#address p{
+  font-size: 25px;
+}
+#address .text{
+  display: flex;
+  justify-content: space-between;
+}
+#address iframe{
+  width: 60%;
+  height: 400px;
+  margin: 0 auto;
+}
+#attention{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#attention p{
+  font-size: 1.5rem;
+}
+footer{
+  padding-top: 50px;
+  margin-top: 50px;
+  background-color: rgb(67, 68, 87);
+}
+footer .foot{
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  color: white;
+}
+.footer-logo h3{
+  font-family:'BIZ UDPMincho', serif;
+  font-size: 2.5rem;
+}
+.footer-logo h3 span{
+  font-size: 1.8rem;
+}
+footer address{
+  width: 30%;
+  margin-top: 50px;
+}
+footer ul{
+  margin-top: 50px ;
+}
+footer address p{
+  margin: 20px 0;
+  font-size: 1.3rem;
+  text-align: center;
+}
+footer nav{
+  width: 30% ;
+  text-align: center;
+}
+footer nav li {
+  width: 100%;
+  list-style: none;
+  margin:15px 0; 
+}
+footer nav a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+}
+header li a:hover{
+  opacity: 0.3;
+}
+footer li a:hover{
+  opacity:0.3;
+}
+
+/*------------Javascript----------------- */
+.slidefade{
+  transform: translateX(-100px); /*translateXを指定した際はoverflowも指定しないと横スクロールできてしまう*/
+  opacity: 0;
+  transition: opacity 1s ,transform 1s;
+}
+.slidefade2{
+  transform: translateX(100px);
+  opacity: 0;
+  transition: opacity 1s , transform 1s;
+}
+.slidefade-after{
+  opacity: 1;
+  transform: translateX(0);
+}

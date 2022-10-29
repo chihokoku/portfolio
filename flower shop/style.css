@@ -1,0 +1,456 @@
+@charset "UTF-8";
+/*
+  Sassの注意点　　Watching... が表示されているのに更新されない
+  定義されていないもの、余計なもの、空白部分があるのが原因
+
+  ex)  定義されていないmixinをincludeしている      
+*/
+html {
+  font-size: 100%;
+  scroll-padding: 100px; /*headerとの重なりを解消できる*/
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+  font-weight: lighter;
+  font-size: 40px;
+  font-family: "Dancing Script", cursive;
+}
+
+header {
+  display: none;
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid white;
+  background-color: black;
+  z-index: 30;
+}
+header .inner {
+  max-width: 100%;
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*navにopenクラスをつける時、openクラスは
+              navと同等の階層にしないと機能しない*/
+}
+header .inner h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 60px;
+  color: white;
+  z-index: 40;
+}
+header .inner .burger {
+  width: 80px;
+  height: 60px;
+  position: relative;
+  z-index: 40;
+}
+header .inner .burger span {
+  display: block; /*これないと横棒が表示されない*/
+  width: 80%;
+  height: 2px;
+  position: absolute;
+  background-color: white;
+}
+header .inner .burger span:nth-child(1) {
+  top: 8px;
+  transition: all 0.5s;
+}
+header .inner .burger span:nth-child(2) {
+  top: 30px;
+}
+header .inner .burger span:last-child {
+  bottom: 5px;
+  transition: all 0.5s;
+}
+header .inner .open-bg span:nth-child(1) {
+  top: 30px;
+  transform: rotate(-45deg);
+  transition: all 0.5s;
+}
+header .inner .open-bg span:nth-child(2) {
+  opacity: 0;
+}
+header .inner .open-bg span:nth-child(3) {
+  top: 30px;
+  transform: rotate(45deg);
+  transition: all 0.5s;
+}
+header .inner nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 500px;
+  transform: translateY(-100%);
+  overflow-y: hidden;
+  transition: all 0.5s;
+  opacity: 1;
+  background-color: black;
+  text-align: center;
+  padding: 120px 50px 30px;
+  z-index: 30;
+}
+header .inner nav a {
+  display: inline-block;
+  color: white;
+  margin-bottom: 30px;
+  border-bottom: 1px solid white;
+  font-size: 20px;
+}
+header .inner nav a:hover {
+  opacity: 0.3;
+}
+header .inner .open {
+  transform: translateY(0%);
+  opacity: 1;
+}
+
+main .mainvisual {
+  margin-bottom: 100px;
+  width: 100%;
+  overflow-x: hidden;
+}
+main .mainvisual ul {
+  display: flex;
+  justify-content: center; /*これがないと画像が右にズレながら拡大してしまう*/
+}
+main .mainvisual img {
+  width: 33.3333%;
+  height: 100vh;
+  flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .wrapper {
+  width: 100%;
+}
+main .wrapper #news {
+  max-width: 100%;
+  width: 70%;
+  margin: 0 auto 100px;
+}
+main .wrapper #news h2 {
+  text-align: left;
+  margin-bottom: 50px;
+}
+main .wrapper #news .text {
+  display: flex;
+  justify-content: space-between;
+}
+main .wrapper #news .text h3 {
+  font-size: 30px;
+  font-weight: lighter;
+}
+main .wrapper #news .text .down {
+  display: block;
+}
+main .wrapper #news .text .accordion {
+  width: 60%;
+  border: 1px solid black;
+  box-shadow: 4px 4px 8px gray;
+  text-align: center;
+  position: relative;
+}
+main .wrapper #news .text .accordion .pin span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  text-align: left;
+  /*spanでnth-childを使用する時はspanのみを親要素で囲むのがベスト！！
+  nth-childの挙動を理解していないから*/
+}
+main .wrapper #news .text .accordion .pin span:nth-child(1) {
+  top: 5px;
+  left: 5px;
+}
+main .wrapper #news .text .accordion .pin span:nth-child(2) {
+  top: 5px;
+  right: 5px;
+}
+main .wrapper #news .text .accordion .pin span:nth-child(3) {
+  bottom: 5px;
+  left: 5px;
+}
+main .wrapper #news .text .accordion .pin span:nth-child(4) {
+  bottom: 5px;
+  right: 5px;
+}
+main .wrapper #news .text .accordion .info-day {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+main .wrapper #news .text .accordion .place {
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+main .wrapper .container #business-hours {
+  width: 100%;
+  height: 400px;
+  padding: 60px 10%;
+  margin-bottom: 100px;
+  background-image: url(img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .wrapper .container #business-hours h2 {
+  text-align: right;
+  color: white;
+  margin-bottom: 50px;
+}
+main .wrapper .container #business-hours table {
+  color: white;
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 40%;
+  margin-left: auto;
+  border: 1px solid white;
+  box-shadow: 4px 4px 16px white;
+  text-align: center;
+}
+main .wrapper .container #business-hours table thead {
+  border-bottom: 1px solid white;
+  font-size: 15px;
+}
+main .wrapper .container #business-hours table th {
+  font-weight: lighter;
+}
+main .wrapper .container #business-hours table td {
+  font-size: 20px;
+  padding: 0 5px;
+}
+main .wrapper .container #business-hours table th:first-child {
+  border-right: 1px solid white;
+}
+main .wrapper .container #business-hours table td:first-child {
+  border-right: 1px solid white;
+  font-size: 10px;
+  padding: 0;
+}
+main .wrapper #gallery {
+  max-width: 100%;
+  width: 80%;
+  margin: 0 auto;
+  /*ここの幅の指定に注意*/
+  margin-bottom: 50vh;
+}
+main .wrapper #gallery h2 {
+  margin-bottom: 40px;
+}
+main .wrapper #gallery .inner {
+  width: 100%;
+  display: grid;
+  gap: 3%;
+  /*gridを使う際は、親要素がpxのような固定値だと横幅固定されてしまう
+  親要素にmax-widthをつけると直る*/
+  grid-template-rows: 40vw 30vw 40vw 30vw 40vw;
+  grid-template-columns: 48% 48%; /*gapを使用する際はここの値を変更しないとはみ出る*/
+}
+main .wrapper #gallery .inner .item {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s;
+}
+main .wrapper #gallery .inner .item img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .wrapper #gallery .inner .item4 {
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+main .wrapper #gallery .inner .item5 {
+  grid-row: 2/4;
+  grid-column: 1/2;
+}
+main .wrapper #gallery .inner .item6 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+main .wrapper #gallery .inner .item7 {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+main .wrapper #gallery .inner .item8 {
+  grid-row: 4/5;
+  grid-column: 1/2;
+}
+main .wrapper #gallery .inner .item9 {
+  grid-row: 5/6;
+  grid-column: 2/3;
+}
+main .wrapper #access {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 70vh;
+  position: relative; /*ここにrelativeを指定しないとaccessが上に表示されない*/
+  z-index: 10;
+  color: white;
+}
+main .wrapper #access p {
+  line-height: 40px;
+}
+main .wrapper .bg {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 5;
+}
+main .wrapper #contact {
+  max-width: 100%;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 100px;
+}
+main .wrapper #contact h2 {
+  margin-bottom: 45px;
+}
+main .wrapper #contact a {
+  display: block;
+  color: black;
+  border: 1px solid black;
+  width: 70%;
+  margin: 0 auto;
+  padding: 30px 0;
+  margin-bottom: 30px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+}
+footer .inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 0;
+  width: 90%;
+  margin: 0 auto;
+}
+footer small p {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  main .wrapper #news {
+    width: 100%;
+    margin: 0 0 100px;
+    padding: 0 20px;
+  }
+  main .wrapper #news .text {
+    flex-direction: column;
+  }
+  main .wrapper #news .text .accordion {
+    width: 100%;
+  }
+  main .wrapper .container #business-hours table {
+    width: 60%;
+  }
+  main .wrapper #gallery {
+    width: 100%;
+    padding: 0 20px;
+  }
+  main .wrapper #gallery .inner {
+    width: 100%;
+    grid-template-columns: 47% 47%;
+    gap: 6vw;
+  }
+  main .wrapper #access {
+    width: 100%;
+    padding: 0 20px;
+  }
+  main .wrapper #contact {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  header .inner h1 {
+    font-size: 40px;
+  }
+  header .inner .burger {
+    width: 40px;
+    height: 40px;
+  }
+  header .inner .burger span:nth-child(2) {
+    top: 20px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  main .mainvisual {
+    margin-bottom: 30px;
+  }
+  main .wrapper #news {
+    margin-bottom: 30px;
+  }
+  main .wrapper #news h2 {
+    margin-bottom: 25px;
+  }
+  main .wrapper #news .text h3 {
+    font-size: 25px;
+  }
+  main .wrapper #news .text .accordion {
+    padding: 10px;
+  }
+  main .wrapper #news .text .accordion .info-day {
+    font-size: 15px;
+    margin: 0;
+  }
+  main .wrapper #news .text .accordion .place {
+    font-size: 30px;
+    margin: 15px 0;
+  }
+  main .wrapper .container {
+    padding-top: 30px;
+  }
+  main .wrapper .container #business-hours {
+    height: 300px;
+    padding: 20px 20px;
+    margin-bottom: 30px;
+  }
+  main .wrapper .container #business-hours h2 {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  main .wrapper .container #business-hours table {
+    width: 100%;
+  }
+  main .wrapper #gallery h2 {
+    margin-bottom: 25px;
+  }
+  main .wrapper #gallery .inner {
+    gap: 8vw;
+    grid-template-columns: 46% 46%;
+  }
+  footer .inner {
+    flex-direction: column;
+    padding: 20px 0;
+  }
+  footer .inner iframe {
+    width: 100%;
+    height: 200px;
+  }
+}/*# sourceMappingURL=style.css.map */

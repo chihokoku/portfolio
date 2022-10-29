@@ -1,0 +1,629 @@
+@charset "UTF-8";
+html {
+  font-size: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  border-bottom: 2px solid gray;
+  z-index: 50;
+  background-image: url(back1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header .inner {
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .inner h1 {
+  height: 100%;
+  font-size: 20px;
+  color: rgb(0, 0, 125);
+  color: white;
+  z-index: 50;
+}
+header .inner h1 span {
+  font-size: 50px;
+  font-family: "Cedarville Cursive", cursive;
+}
+header .inner nav {
+  width: 70%;
+}
+header .inner nav ul {
+  display: flex;
+  justify-content: end;
+}
+header .inner nav ul > .menu-second {
+  position: relative;
+}
+header .inner nav ul li {
+  padding: 30px 0px;
+}
+header .inner nav ul li .menu-second {
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 80px;
+  left: 0%;
+  font-size: 20px;
+  padding: 20px;
+  background-image: url(back1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60% 5%;
+}
+header .inner nav ul li .menu-second li {
+  width: 20%;
+}
+header .inner nav ul li .menu-second li a:last-child {
+  border-right: 2px solid gray;
+}
+header .inner nav ul li:hover .menu-second {
+  visibility: visible;
+}
+header .inner nav ul li a {
+  display: block;
+  text-align: center;
+  color: white;
+  border-left: 2px solid gray;
+  padding: 0 10px;
+}
+header .inner nav ul li a:hover {
+  opacity: 0.5;
+}
+header .inner nav ul li .support {
+  border-right: 2px solid gray;
+}
+header .inner .burger {
+  display: none;
+}
+
+main {
+  background-image: url(back1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.burger-nav {
+  display: none;
+}
+
+.mainvisual {
+  position: relative;
+  width: 100%;
+  margin-bottom: 80px;
+  background-color: transparent;
+}
+.mainvisual .content-icon {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 8px;
+  left: 15%;
+  width: 200px;
+}
+.mainvisual .content-icon .line-icon a {
+  font-size: 80px;
+  color: rgb(36, 199, 63);
+}
+.mainvisual .content-icon .twitter-icon {
+  margin-top: 10px;
+}
+.mainvisual .content-icon .twitter-icon a {
+  font-size: 70px;
+  color: rgb(0, 208, 255);
+}
+.mainvisual picture {
+  width: 100%;
+}
+.mainvisual picture img {
+  width: 100%;
+}
+
+.present {
+  width: 80%;
+  margin: 0 auto 80px;
+}
+.present h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(255, 110, 134);
+  color: aqua;
+}
+.present ul {
+  border: 4px solid gray;
+  background-color: white;
+}
+.present ul li {
+  display: flex;
+  border-bottom: 2px dotted gray;
+}
+.present ul li:last-child {
+  border: none;
+}
+.present ul li img {
+  width: 350px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.present ul li .text {
+  padding: 10% 40px 40px;
+}
+.present ul li .text h3 {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.present ul li .text p {
+  font-size: 20px;
+}
+
+.application {
+  width: 80%;
+  margin: 0 auto 80px;
+  color: white;
+}
+.application h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(255, 110, 134);
+  color: aqua;
+}
+.application ul {
+  display: flex;
+  justify-content: space-between;
+}
+.application ul li {
+  width: 40%;
+}
+.application ul li h3 {
+  width: 30%;
+  margin: 0 auto 30px;
+  font-size: 35px;
+  border-bottom: 2px solid white;
+  text-align: center;
+}
+.application ul li .explain .icon {
+  font-size: 100px;
+  text-align: center;
+}
+.application ul li .explain .icon i {
+  display: inline-block;
+}
+.application ul li .explain p {
+  font-size: 20px;
+}
+
+.deadline {
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+.deadline h2 {
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(255, 110, 134);
+  color: aqua;
+}
+.deadline .detail {
+  width: 100%;
+  height: 550px;
+  padding: 20px;
+  border-radius: 40px;
+  overflow-y: scroll;
+  background-color: white;
+}
+.deadline .detail h3 {
+  font-size: 30px;
+  position: relative;
+  margin: 60px 0 10px;
+  padding-left: 20px;
+}
+.deadline .detail h3:first-child {
+  margin-top: 0;
+}
+.deadline .detail h3::before {
+  content: "";
+  width: 6px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(255, 110, 134);
+}
+.deadline .detail p {
+  padding-left: 20px;
+}
+.deadline .detail ul li {
+  list-style: inside;
+  text-indent: -1rem;
+  margin-left: 20px;
+}
+
+footer {
+  width: 100%;
+  padding: 30px 0 0;
+  color: rgb(0, 0, 133);
+}
+footer .inner {
+  width: 90%;
+  margin: 0 auto;
+}
+footer .inner h1 {
+  font-size: 25px;
+  color: rgb(0, 0, 133);
+  margin-bottom: 50px;
+}
+footer .inner h1 span {
+  font-size: 60px;
+  font-family: "Cedarville Cursive", cursive;
+}
+footer .inner .wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+footer .inner .wrapper nav li {
+  margin-bottom: 20px;
+}
+footer .inner .wrapper nav li a {
+  color: rgb(0, 0, 133);
+  font-size: 20px;
+}
+footer .inner .wrapper .info h3 {
+  margin-bottom: 30px;
+  border-bottom: 1px solid rgb(0, 0, 133);
+}
+footer .inner .wrapper .info li {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+footer .inner .wrapper .info li a {
+  color: rgb(0, 0, 133);
+}
+
+@media screen and (max-width: 1050px) {
+  header {
+    height: 60px;
+  }
+  header .inner h1 {
+    font-size: 20px;
+  }
+  header .inner h1 span {
+    font-size: 35px;
+  }
+  header .inner nav {
+    display: none;
+  }
+  header .inner .burger {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 50;
+  }
+  header .inner .burger:hover {
+    cursor: pointer;
+  }
+  header .inner .burger span {
+    display: block; /*これないと横棒が表示されない*/
+    width: 80%;
+    height: 4px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: rgb(193, 193, 193);
+    border-radius: 30px;
+  }
+  header .inner .burger span:nth-child(1) {
+    top: 10px;
+    left: 5px;
+    transition: all 0.5s;
+  }
+  header .inner .burger span:nth-child(2) {
+    top: 23px;
+    left: 5px;
+  }
+  header .inner .burger span:nth-child(3) {
+    bottom: 10px;
+    left: 5px;
+    transition: all 0.5s;
+  }
+  header .inner .open-bg span:nth-child(1) {
+    top: 28px;
+    left: 5px;
+    transform: rotate(-225deg);
+    transition: all 0.5s;
+  }
+  header .inner .open-bg span:nth-child(2) {
+    opacity: 0;
+  }
+  header .inner .open-bg span:nth-child(3) {
+    bottom: 20px;
+    left: 5px;
+    transform: rotate(225deg);
+    transition: all 0.5s;
+  }
+  header .inner .open-bg span:nth-child(1) {
+    top: 26px;
+    left: 5px;
+    transform: rotate(-225deg);
+    transition: all 0.5s;
+  }
+  header .inner .open-bg span:nth-child(2) {
+    opacity: 0;
+  }
+  header .inner .open-bg span:nth-child(3) {
+    bottom: 20px;
+    left: 5px;
+    transform: rotate(225deg);
+    transition: all 0.5s;
+  }
+  .burger-nav {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 60px 0 0;
+    transform: translateY(-100%);
+    overflow-y: hidden;
+    transition: all 0.5s;
+    opacity: 0;
+  }
+  .burger-nav ul {
+    background-color: white;
+  }
+  .burger-nav ul li {
+    padding: 20px 5%;
+    border-bottom: 2px solid gray;
+    position: relative;
+  }
+  .burger-nav ul li:first-child {
+    border-top: 2px solid gray;
+  }
+  .burger-nav ul li::before {
+    content: "";
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    top: 44%;
+    left: 3%;
+    transform: rotate(35deg);
+    background-color: rgb(0, 0, 125);
+  }
+  .burger-nav ul li::after {
+    content: "";
+    width: 10px;
+    height: 2px;
+    position: absolute;
+    top: 52%;
+    left: 3%;
+    transform: rotate(-35deg);
+    background-color: rgb(0, 0, 125);
+  }
+  .burger-nav ul li a {
+    color: black;
+  }
+  .burger-nav .link ul li {
+    border: none;
+  }
+  .burger-nav .link form {
+    position: relative;
+    padding: 20px 5%;
+    background-color: white;
+  }
+  .burger-nav .link form input {
+    width: 100%;
+    height: 30px;
+    border: 2px solid gray;
+  }
+  .burger-nav .link form i {
+    position: absolute;
+    right: 7%;
+    top: 30%;
+  }
+  .open {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.5s;
+  }
+  footer .inner h1 {
+    font-size: 20px;
+  }
+  footer .inner h1 span {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .mainvisual .content-icon {
+    flex-direction: column;
+    width: 100px;
+    top: 3%;
+    left: 5%;
+  }
+  .present {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .application ul {
+    flex-direction: column;
+  }
+  .application ul li {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .application ul li:first-child {
+    margin-bottom: 50px;
+  }
+  .application ul li h3 {
+    margin-bottom: 0;
+  }
+  .application ul li .explain {
+    display: flex;
+    justify-content: space-around;
+  }
+  .application ul li .explain .icon {
+    font-size: 60px;
+  }
+  .application ul li .explain .send {
+    padding-top: 5%;
+  }
+  .application ul li .explain .text {
+    width: 200px;
+    padding-top: 5%;
+  }
+  .deadline {
+    width: 90%;
+  }
+  footer .inner .wrapper {
+    flex-wrap: wrap;
+  }
+  footer .inner .wrapper nav {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  footer .inner .wrapper .info {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+  footer .inner .wrapper .info h3 {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 600px) {
+  header .inner .burger {
+    width: 30px;
+    height: 30px;
+  }
+  header .inner .burger span {
+    height: 3px;
+  }
+  header .inner .burger span:nth-child(1) {
+    top: 7px;
+    left: 5px;
+    transition: all 0.5s;
+  }
+  header .inner .burger span:nth-child(2) {
+    top: 14px;
+    left: 5px;
+  }
+  header .inner .burger span:nth-child(3) {
+    bottom: 5px;
+    left: 5px;
+    transition: all 0.5s;
+  }
+  header .inner .open-bg span:nth-child(1) {
+    top: 14px;
+  }
+  header .inner .open-bg span:nth-child(3) {
+    bottom: 13px;
+  }
+  .burger-nav nav ul li {
+    padding: 20px 6%;
+  }
+  .burger-nav nav ul li a {
+    font-size: 12px;
+  }
+  .burger-nav nav ul li::before {
+    width: 8px;
+    height: 1px;
+    top: 46%;
+  }
+  .burger-nav nav ul li::after {
+    width: 8px;
+    height: 1px;
+    top: 53%;
+  }
+  .burger-nav .link ul li {
+    padding: 20px 6%;
+  }
+  .burger-nav .link ul li a {
+    font-size: 12px;
+  }
+  .burger-nav .link ul li::before {
+    width: 8px;
+    height: 1px;
+    top: 46%;
+  }
+  .burger-nav .link ul li::after {
+    width: 8px;
+    height: 1px;
+    top: 53%;
+  }
+  .present ul li {
+    padding-top: 20px;
+    flex-direction: column;
+  }
+  .present ul li img {
+    width: 100%;
+    height: 250px;
+  }
+  .present ul li .text h3 {
+    font-size: 20px;
+  }
+  .present ul li .text p {
+    font-size: 15px;
+  }
+  .present ul li .first {
+    padding-top: 0;
+  }
+  .application ul li .explain {
+    padding-top: 20px;
+  }
+  .application ul li .explain .icon {
+    display: flex;
+    flex-direction: column;
+  }
+  .application ul li .explain .send {
+    padding: 0;
+  }
+  .application ul li .explain .text {
+    width: 120px;
+    padding: 0;
+  }
+  .application ul li .explain .text p {
+    font-size: 13px;
+  }
+  .deadline .detail h3 {
+    font-size: 20px;
+    padding-left: 10px;
+    margin-top: 30px;
+  }
+  .deadline .detail h3::before {
+    width: 3px;
+    height: 30px;
+  }
+  .deadline .detail p {
+    font-size: 12px;
+  }
+  .deadline .detail ul li {
+    font-size: 12px;
+  }
+  footer .inner .wrapper a {
+    font-size: 15px;
+  }
+  footer .inner .wrapper nav ul li a {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=style.css.map */
