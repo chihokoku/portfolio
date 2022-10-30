@@ -33,18 +33,6 @@ a{
     margin-bottom: 20px;
 }
 
-
-// keyframsを使わずにクラスを使わずにコンテンツを表示
-// .fade-left{
-//     transform: translateX(-100px);
-// }
-// .fade-right{
-//     transform: translateX(100px);
-// }
-// .box{
-//     opacity: 0;
-//     transition: opacity 1s ,transform 1s;
-// }
 .fade-after{
     opacity: 1;
     transform: translateX(0);

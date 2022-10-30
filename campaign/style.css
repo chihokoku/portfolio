@@ -117,7 +117,7 @@ main {
   display: flex;
   justify-content: space-between;
   position: absolute;
-  top: 8px;
+  top: 0;
   left: 15%;
   width: 200px;
 }
@@ -390,6 +390,7 @@ footer .inner .wrapper .info li a {
     overflow-y: hidden;
     transition: all 0.5s;
     opacity: 0;
+    z-index: 30;
   }
   .burger-nav ul {
     background-color: white;
@@ -570,6 +571,12 @@ footer .inner .wrapper .info li a {
     width: 8px;
     height: 1px;
     top: 53%;
+  }
+  .mainvisual .content-icon .line-icon a {
+    font-size: 60px;
+  }
+  .mainvisual .content-icon .twitter-icon a {
+    font-size: 50px;
   }
   .present ul li {
     padding-top: 20px;

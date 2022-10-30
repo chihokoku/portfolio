@@ -121,7 +121,7 @@ main{
         display: flex;
         justify-content: space-between;
         position: absolute;
-        top: 8px;
+        top: 0;
         left: 15%;
         width: 200px;
         .line-icon{
@@ -423,6 +423,7 @@ footer{
         overflow-y: hidden;
         transition:all 0.5s;
         opacity: 0;
+        z-index: 30;
         ul{
              background-color: white;
             li{
@@ -646,6 +647,20 @@ footer{
                         height: 1px;
                         top: 53%;
                     }
+                }
+            }
+        }
+    }
+    .mainvisual{
+        .content-icon{
+            .line-icon{
+                a{
+                    font-size: 60px;
+                }
+            }
+            .twitter-icon{
+                a{
+                    font-size: 50px;
                 }
             }
         }
