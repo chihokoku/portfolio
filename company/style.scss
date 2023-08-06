@@ -987,13 +987,13 @@ footer{
                         transition: all 0.5s;
                     }
                     &:nth-child(4){
-                        font-size: 0.2rem;
-                        left: 5px;
+                        font-size: 6px;  //pcでは10px以下の文字サイズは表示できない
+                        left: 2px;
                         bottom: 0;
                     }
                 }
                 .menu{
-                    font-size: 5px;
+                    font-size: 6px;
                 }
             }
             .open-bg{

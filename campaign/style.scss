@@ -69,6 +69,7 @@ header{
                         background-repeat: no-repeat;
                         background-size: cover;
                         background-position: 60% 5%;
+                        z-index: 30;
                         li{
                             width: 20%;
                             a{
@@ -425,7 +426,7 @@ footer{
         opacity: 0;
         z-index: 30;
         ul{
-             background-color: white;
+            background-color: white;
             li{
                 padding: 20px 5%;
                 border-bottom: 2px solid gray;

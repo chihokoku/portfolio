@@ -239,9 +239,6 @@
     .mainvisual .mts-span{
         font-size: 4.0rem;
     }
-    /* .mainvisual .coment{
-        font-size: 1.0rem;
-    } */
     .wrapper-time{
         margin-top: 50px;
         font-size: 1.0rem;
@@ -257,7 +254,10 @@
         width: 50%;
     }
     .visual{
-        display: none;
+        flex-direction: column;
+    }
+    .visual ul li img{
+        height: 300px;
     }
     #address p{
         font-size: 1.0rem;

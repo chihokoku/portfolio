@@ -86,7 +86,6 @@ header{
     
 }
 
-
 .back::before{
     content: "";
     display: block;
@@ -96,6 +95,7 @@ header{
     top: 0;
     left: 0;
     background-image: url(main.jpg);
+    filter: blur(20px);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
@@ -240,6 +240,10 @@ header{
     margin: 0 auto;
     
 }
+.about-container{
+  width: 100%;
+  background-color: white;
+}
 #about{
     transform: translateY(100px);
     opacity: 0;
@@ -262,10 +266,11 @@ header{
         .text{
             width: 60%;
             margin-top: 300px;
+            margin-bottom: 50px;
             margin-left: -150px;
             padding: 20px 5%;
             border-radius: 10px;
-            background-color: white;
+            background-color: rgb(229, 247, 254);
             h3{
                 font-size: 30px;
                 margin-bottom: 30px;
@@ -341,6 +346,10 @@ header{
     
     }
 }
+.contact-container{
+  width: 100%;
+  background-color: white;
+}
 #contact{
    opacity: 0;
    transform: translateY(100px);
@@ -349,6 +358,7 @@ header{
     justify-content: space-around;
     flex-direction: row-reverse;
     padding-bottom: 100px;
+    margin-bottom: 100px;
     .text{
         width: 50%;
         padding-top: 90px;
@@ -393,7 +403,7 @@ header{
     }
 }
 footer{
-    background-color: gray;
+    background-color: rgb(194, 194, 194);
     color: white;
     padding-top: 20px  ;
     .inner{
@@ -486,6 +496,7 @@ footer{
                 }
             }
             .open-bg{
+              // バーガーを×にするクラス
                 span{
                     &:nth-child(1){
                         top: 30px;
@@ -517,21 +528,24 @@ footer{
         background-color: gray;
     }
     @keyframes open-burger{
-        0%{
-            opacity: 0;
-        }
-        100%{
-            opacity: 1;
-        }
+      0%{
+          opacity: 0;
+      }
+      100%{
+          opacity: 1;
+      }
+      // openで使用するアニメーションを定義
     }
     .open{
         display: block;
         animation: open-burger 1s 0.2s forwards ;
+        // バーガーナビ押した時、このクラスが追加
     }
     .active{
         transform: scale(50);
     }
     .burger-nav{
+      // バーガー押した時に出てくるナビメニュー
         position: fixed;
         top: 0;
         left: 0;
@@ -717,6 +731,7 @@ footer{
     }
     #contact{
         flex-direction: column;
+        padding-bottom: 30px;
         .text{
             width: 100%;
             padding: 0;
@@ -724,6 +739,7 @@ footer{
             h2{
                 width: 100%;
                 text-align: center;
+                margin-top: 30px;
             }
         }
         .icon{
