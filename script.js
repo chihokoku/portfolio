@@ -96,7 +96,7 @@ $(function () {
     // headerの色が変わるアニメーション
     if (scroll > windowHeight) {
       $('header').css('transition', 'all 0.5s');
-      $('header').css('background-color', 'rgb(194, 194, 194)');
+      $('header').css('background-color', 'rgb(92, 92, 92)');
     } else {
       $('header').css('background-color', 'transparent')
     }
