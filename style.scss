@@ -290,11 +290,15 @@ header{
           }
           p{
               font-size: 20px;
+            .connaiconnai{
+              color: aqua;
+              text-decoration: underline;
+            }
           }
           .git{
             a{
               text-decoration: underline;
-              color: white;
+              color: aqua;
             }
           }
         }
@@ -312,6 +316,11 @@ header{
         text-align: left;
         color: white;
     }
+    .sub-title{
+      padding-left: 20px;
+      color: white;
+      font-size: 25px;
+    }
     ul{
         display: flex;
         justify-content: space-between;
@@ -319,7 +328,6 @@ header{
         width: 100%;
         li{
             width: 48%;
-            // height: 300px;
             margin-bottom: 60px; 
            background-color: black;
            border-radius: 20px;

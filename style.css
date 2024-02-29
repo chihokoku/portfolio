@@ -307,9 +307,13 @@ header nav ul li a:hover {
 #about .container .text p {
   font-size: 20px;
 }
+#about .container .text p .connaiconnai {
+  color: aqua;
+  text-decoration: underline;
+}
 #about .container .text .git a {
   text-decoration: underline;
-  color: white;
+  color: aqua;
 }
 
 #works {
@@ -323,6 +327,11 @@ header nav ul li a:hover {
   margin-bottom: 20px;
   text-align: left;
   color: white;
+}
+#works .sub-title {
+  padding-left: 20px;
+  color: white;
+  font-size: 25px;
 }
 #works ul {
   display: flex;
