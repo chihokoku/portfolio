@@ -49,7 +49,7 @@ $(function () {
       slideToShow: 1,
       slideToScroll: 1,
       dots: true,
-      pauseOnFoucs: false,
+      pauseOnFocus: false,
       pauseOnHover: false,
       pauseOnDotsHover: false,
     })
